@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cadastro</title>
+
+    <link rel="shortcut icon" href="./src/imagem/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/variavel.css">
+    <link rel="stylesheet" href="./src/css/styleForm.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="introducao">
+            <h1>FICOU COM DÚVIDA?<br>NOS MANDE UMA MENSAGEM!</h1>
+            <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
+        </div>
+        <form action="#" class="formulario">
+            <label for="nome"></label>
+            <input type="text" name="nome" class="caixa" id="nome" placeholder=" Nome Completo *">
+
+            <p class="erro">*Campo obrigatório</p>
+
+            <label for="email"></label>
+            <input type="email" name="email" class="caixa" id="email" placeholder=" Email * ">
+
+            <p class="erro">*Campo obrigatório</p>
+
+            <label for="telefone"></label>
+            <input type="tel" name="telefone" class="caixa" id="tel" placeholder=" Telefone *">
+
+            <p class="erro">*Campo obrigatório</p>
+
+            <textarea name="txt" class="caixa " id="txt" cols="30" rows="10" placeholder=" Mesagem *"></textarea>
+
+            <p class="erro">*Campo obrigatório</p>
+
+            <h5>*Campos obrigatórios</h5>
+
+            <input type="button" value="Enviar" class="btn" onclick="btn()">
+        </form>
+    </main>
+    <script src="./src/js/formulario.js"></script>
+</body>
+
+</html>

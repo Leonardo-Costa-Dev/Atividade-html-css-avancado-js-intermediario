@@ -1,0 +1,211 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(../imagem/bg-desktop.svg);
+    background-color: var(--Violet);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagens {
+    display: flex;
+    flex-direction: column;
+    max-width: 655px;
+}
+
+.imagens .logo {
+    max-width: 190px;
+    margin: 50px 0 100px 0;
+} 
+
+.introducao {
+    max-width: 625px;
+    padding: 50px;
+}
+
+.introducao h1 {
+    font-size: 40px;
+    margin-top: 10%;
+    font-weight: 700;
+}
+
+.introducao p {
+    font-size: 19px;
+    margin: 20px 0px;
+}
+
+.introducao #btn {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: var(--Violet);
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+}
+
+.introducao #btn:hover {
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+    transition: 0.6s;
+}
+
+.social {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 20%;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.social i {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #fff;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.social i:hover {
+    transition: 0.6s;
+    border: solid 1px var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+@media(max-width: 1150px){
+    .card {
+        flex-direction: column;
+        margin-top: 50px; 
+    }
+
+    .imagens {
+        max-width: 350px;
+    }
+
+    .imagens .logo {
+        margin-bottom: 20px;
+    }
+
+    .introducao {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introducao h1 {
+        margin-top: 5px;
+        width: 60%;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .introducao p {
+        width: 60%;
+        text-align: center;
+    }
+
+    .introducao .btn {
+        height: 40px;
+        width: 300px;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    .social i {
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+    }
+}
+
+@media(max-width: 650px){
+    body {
+        background: url(../imagem/bg-mobile.svg) no-repeat;
+        background-color: var(--Violet);
+    }
+    .card {
+        flex-direction: column;
+        margin-top: 50px; 
+    }
+
+    .imagens {
+        max-width: 300px;
+    }
+
+    .imagens .logo {
+        margin-bottom: 50px;
+        width: 100px;
+    }
+
+    .introducao {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introducao h1 {
+        margin-top: 5px;
+        width: 60%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .introducao p {
+        width: 60%;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .introducao #btn {
+        height: 40px;
+        width: 200px;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    .social img {
+        width: 30px;
+        padding: 5px;
+    }
+}
