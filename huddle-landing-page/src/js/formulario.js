@@ -1,24 +1,53 @@
-function btn() {
-let bordas = document.querySelectorAll ('.caixa')
-let erro = document.querySelectorAll ('.erro')
+const campos = document.querySelectorAll ('.caixa')
+const erro = document.querySelectorAll ('.erro')
 
-if(nome.value == ''|| email.value == ''|| tel.value == ''|| txt.value == ''){
 
-    for(i=0; i < bordas.length; i++){
-        bordas[i].classList.remove ('ativado')
-        bordas[i].classList.add ('desativado')
-    }
-    for(i=0; i < erro.length; i++){
-        erro[i].style.display = 'block'
-    }
-}else {
-    for(i=0; i < bordas.length; i++){
-        bordas[i].classList.remove ('desativado')
-        bordas[i].classList.add ('ativado')
-    }
-    for(i=0; i < erro.length; i++){
-        erro[i].style.display = 'none'
+function errosValidacao (index) {
+    erro[index].style.display = 'block'
+    campos[index].style.border = 'solid 2px red'
+}
+
+function acertoValidacao (index) {
+    erro[index].style.display = 'none'
+    campos[index].style.border = 'solid 2px green'
+}
+
+
+function validarName () {
+    if(campos[0].value == ''){
+        errosValidacao(0)
+    }else{
+        acertoValidacao(0)
     }
 }
 
+function validarEmail () {
+    if(campos[1].value == ''){
+        errosValidacao(1)
+    }else{
+        acertoValidacao(1)
+    }
 }
+
+function validarTel () {
+    if(campos[2].value == ''){
+        errosValidacao(2)
+    }else{
+        acertoValidacao(2)
+    }
+}
+
+function validarTexto () {
+    if(campos[3].value == ''){
+        errosValidacao(3)
+    }else{
+        acertoValidacao(3)
+    }
+}
+
+document.querySelector('.btn').addEventListener('click',() => {
+    validarName()
+    validarEmail()
+    validarTel()
+    validarTexto()
+})
